@@ -1,0 +1,25 @@
+{
+  "name": "body-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinseokJoo/body-data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MinseokJoo/body-data/issues"
+  },
+  "homepage": "https://github.com/MinseokJoo/body-data#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
