@@ -2,16 +2,13 @@ const express = require("express")
 
 const app = express()
 
-app.use(express.json())
+app.use(express.json());
+
 
 app.get("/querystring", (req,res) => {
   const id = req.query.id
-
+  
   res.send(id)
-})
-
-app.post("/body-formdata", (req,res) => {
-  res.send('<form enctype="multiaprt/form-data" method="post"><input name="id"/><button type="submit">전송</button></form>')
 })
 
 app.post("/body-mulipart", (req,res) => {
