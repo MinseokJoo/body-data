@@ -5,12 +5,13 @@ const app = express()
 app.use(express.json())
 
 app.get("/querystring", (req,res) => {
-  res.send("querystring page")
+  const id = req.query.id
+
+  res.send(id)
 })
 
-
 app.post("/body-formdata", (req,res) => {
-  res.send("body-formdata page")
+  res.send('<form enctype="multiaprt/form-data" method="post"><input name="id"/><button type="submit">전송</button></form>')
 })
 
 app.post("/body-mulipart", (req,res) => {
@@ -18,8 +19,9 @@ app.post("/body-mulipart", (req,res) => {
 })
 
 app.post("/body-json", (req,res) => {
-  res.send("body-json page")
-})
+  const {id} = req.body
 
+  res.send(id)
+})
 
 app.listen(3000,() => console.log(3000,"번 퐅으로 섭어 열림"))
